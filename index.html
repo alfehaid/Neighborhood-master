@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Best food in Buraidah city</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <h1>Best food in Buraidah city Yammmmy </h1>
+    <input data-bind="textInput: query" placeholder="looking fast for you best coffee shop!">
+    <p class="fsq">
+        <strong data-bind="text: fName"></strong> <strong data-bind="text: fRating"></strong>
+    </p>
+
+    <div id="MapArea"></div>
+
+    <div id="list">
+        <table>
+            <tbody data-bind="foreach: filteredMarkers">
+                <tr data-bind="click: $root.selectItem">
+                    <td data-bind="text: title, css : { hidden : isHidden() }" class='item'></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script type='text/javascript' src='js/knockout.js'></script>
+    <script type='text/javascript' src='js/jquery.js'></script>
+    <script type="text/javascript" src="js/js.js"></script>
+    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAWls5T6W1bkUVLLKNYu1AjwIx6HJGJOqw&callback=initMap"></script>
+
+</body>
+
+</html>
