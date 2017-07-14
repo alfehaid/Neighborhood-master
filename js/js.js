@@ -74,7 +74,7 @@ function finalMarker(marker_info, model) {
     self.venues = marker_info.venues;
     self.text = ko.observable(marker_info.details);
     self.infowindow = new google.maps.InfoWindow({
-        content: self.text()
+    content: self.text()
     });
     self.googleMarker = new google.maps.Marker({
         position: marker_info.loc,
@@ -101,6 +101,7 @@ function finalMarker(marker_info, model) {
                     model.fRating(coffven.rating);
                     model.fRating('Rating by foursquare is ' + coffven.rating + ' ');
                 });
+            .error(function() {model.fName('error');model.fRating('error');});
     };
 
     self.toggleBounce = function(marker) {
