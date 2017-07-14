@@ -10,6 +10,13 @@
 #### how to use?
 
 1) Download the repo.
+2) Double click to browse the "index.html" file.
+
+#### if you have problem with browsing the "index.html":
+1) Download the repo.
 2) Unzip "Archive.zip" file.
-3) Open the unzipped folder.
-4) Double click to browse the "index.html" file.
+3) Double click to browse the "index.html" file.
+4) Open the unzipped folder.
+
+
+Thank you
