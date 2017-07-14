@@ -100,7 +100,7 @@ function finalMarker(marker_info, model) {
                     model.fName(coffven.name);
                     model.fRating(coffven.rating);
                     model.fRating('Rating by foursquare is ' + coffven.rating + ' ');
-                })
+                });
     };
 
     self.toggleBounce = function(marker) {
