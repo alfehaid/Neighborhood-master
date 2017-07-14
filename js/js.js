@@ -122,7 +122,6 @@ function finalMarker(marker_info, model) {
     };
     self.startState = function() {
         self.isHidden(false);
-        self.googleMarker.setVisible(true);
         self.infowindow.close();
     };
     self.doNotMatch = function() {
