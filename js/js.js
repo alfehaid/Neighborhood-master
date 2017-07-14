@@ -89,8 +89,11 @@ function finalMarker(marker_info, model) {
     });
     self.selected = function() {
         model.kill();
+        model.fRating('');
+        model.fName('');
         self.clicked();
         var foursquareUrl = 'https://api.foursquare.com/v2/venues/' + self.venues + '?v=20170503&' + 'client_id=' + 'LAJFPQ22OSOO4DPJ1BHKACKYCP4SHAMINJIGIWIBM2TUFDWF' + '&client_secret=' + 'SVUJOXFIL0DRNNZDRKAA12SGLZXBQUMXVJPPFJX52A21NHGV';
+
         $.ajax({
                 url: foursquareUrl
             })
@@ -101,8 +104,12 @@ function finalMarker(marker_info, model) {
                     model.fRating(coffven.rating);
                     model.fRating('Rating by foursquare is ' + coffven.rating + ' ');
                 });
-            .error(function() {model.fName('error');model.fRating('error');});
-    };
+            .error(
+                function() {
+                    model.fName('error');
+                    model.fRating('error');
+        });
+     };
 
     self.toggleBounce = function(marker) {
         if(marker.getAnimation() !== null) {
