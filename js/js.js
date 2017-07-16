@@ -4,7 +4,7 @@ var locationDetails;
 var initMap = function() {
     map = new google.maps.Map(document.getElementById('MapArea'), {
         center: new google.maps.LatLng(26.355377, 44.014921),
- //       center: new google.maps.LatLng(26.359231, 43.981812),
+        gestureHandling: 'cooperative',
         zoom: 12,
     });
 
@@ -107,8 +107,8 @@ function finalMarker(marker_info, model) {
                 })
             .error(
                 function() {
-                    model.fName('error');
-                    model.fRating('error');
+                    model.fName('Foursquare has failed');
+                    model.fRating('Foursquare has failed');
         });
      };
 

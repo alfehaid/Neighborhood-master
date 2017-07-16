@@ -36,12 +36,13 @@
     <script type='text/javascript' src='js/knockout.js'></script>
     <script type='text/javascript' src='js/jquery.js'></script>
     <script type="text/javascript" src="js/js.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAWls5T6W1bkUVLLKNYu1AjwIx6HJGJOqw&callback=initMap" onerror="ErrorLoadMap()"></script>
     <script>
         function ErrorLoadMap(){
             document.getElementById("MapArea").innerHTML = "The Map could not be loaded.";
         }
     </script>
+    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAWls5T6W1bkUVLLKNYu1AjwIx6HJGJOqw&callback=initMap" onerror="ErrorLoadMap()"></script>
+
 
 
 </body>
